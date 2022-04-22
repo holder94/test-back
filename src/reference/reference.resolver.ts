@@ -6,17 +6,17 @@ import { DeliveryType, OrderStatus, ProductStatus } from '../graphql'
 export class ReferenceResolver {
   constructor(private retailService: RetailService) {}
 
-  @Query()
+  @Query('deliveryTypes')
   async deliveryTypes(): Promise<DeliveryType[]> {
     return this.retailService.deliveryTypes()
   }
 
-  @Query()
+  @Query('productStatuses')
   async productStatuses(): Promise<ProductStatus[]> {
     return this.retailService.productStatuses()
   }
 
-  @Query()
+  @Query('orderStatuses')
   async orderStatuses(): Promise<OrderStatus[]> {
     return this.retailService.orderStatuses()
   }

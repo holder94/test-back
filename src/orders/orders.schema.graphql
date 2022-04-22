@@ -32,7 +32,7 @@ type OrderItem {
 type Order {
     number: String!
     id: Int!
-    site: String!
+    site: String
     createdAt: String!
     status: String!
     delivery: OrderDelivery
